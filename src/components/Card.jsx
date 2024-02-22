@@ -1,12 +1,7 @@
-import axios from "axios";
-import { useAtom } from "jotai";
-import { useState, useEffect } from "react";
-import { swapiURL } from "../api";
-
 export default function Card(props) {
   return (
     <>
-    <div key={props.key}>
+    <div>
 
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       <button
@@ -14,7 +9,6 @@ export default function Card(props) {
         >
           <div
             className="card w-96 bg-base-100 shadow-xl"
-            key={props.key}
             >
             <figure>
               <img src={props.src} alt={props.name} />
