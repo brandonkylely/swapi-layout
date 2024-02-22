@@ -25,14 +25,14 @@ export default function HomePage() {
   return (
     <>
       <Header />
-      {feed &&           
+      {feed.name &&           
       <Card
             name={feed.name}
             src={"starship.jpg"}
             manufacturer={feed.manufacturer}
             cost_in_credits={feed.cost_in_credits}
           />}
-      {starshipArray &&
+      {starshipArray && !feed.name &&
         starshipArray.map((item, index) => (
           <Card
             key={index}
